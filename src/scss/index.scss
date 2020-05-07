@@ -1,0 +1,29 @@
+@import "./elements/button.scss";
+@import "./common.scss";
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+}
+
+@each $size-name, $size in $size-map {
+    .#{$size-name} {
+        font-size: $size;
+    }
+};
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}

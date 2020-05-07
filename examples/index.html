@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Flaty - Development</title>
+    <style>
+        body {
+            background-color: #2c3e50;
+        }
+        .main {
+            margin: 200px auto;
+            width: fit-content;
+        }
+        .row {
+            display: block;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="row">
+            <button class="fl-button">Ấn</button>
+            <button class="fl-button red">Ấn</button>
+            <button class="fl-button blue">Ấn</button>
+            <button class="fl-button olive right">Ấn</button>
+        </div>
+        <div class="row">
+            <button class="fl-button basic">Ấn</button>
+            <button class="fl-button inverted red">Ấn</button>
+            <button class="fl-button inverted blue">Ấn</button>
+            <button class="fl-button inverted olive">Ấn</button>
+        </div>
+        <div class="row">
+            <div class="fl-buttons huge">
+                <button class="fl-button">
+                    <i class="far fa-align-left"></i>
+                </button>
+                <button class="fl-button">
+                    <i class="far fa-align-center"></i>
+                </button>
+                <button class="fl-button">
+                    <i class="far fa-align-right"></i>
+                </button>
+                <button class="fl-button">
+                    <i class="far fa-align-justify"></i>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="fl-buttons y">
+                <button class="fl-button">
+                    <i class="far fa-align-left"></i>
+                </button>
+                <button class="fl-button">
+                    <i class="far fa-align-center"></i>
+                </button>
+                <button class="fl-button">
+                    <i class="far fa-align-right"></i>
+                </button>
+                <button class="fl-button disabled">
+                    <i class="far fa-align-justify"></i>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <a class="fl-button circular blue icon" href="#">
+                <i class="fab fa-facebook-square"></i>
+            </a>
+            <a class="fl-button blue icon">
+                <i class="fab fa-facebook-square"></i>
+            </a>
+            <a class="fl-button circular blue icon">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a class="fl-button blue icon">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </div>
+        <script src="flaty.js"></script> 
+    </div>
+</body>
+</html>

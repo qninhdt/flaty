@@ -1,0 +1,10 @@
+entry: ./src/index.js
+
+output:
+  path: dist
+  js: flaty.js
+  css: flaty.js
+
+serve:
+  port: 8080
+  example: ./examples

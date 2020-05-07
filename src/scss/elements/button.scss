@@ -1,0 +1,159 @@
+@import "../common.scss";
+@import "../mixins/reset";
+@import "../mixins/font";
+@import "../mixins/color";
+
+// config
+$light-button-border: 0.12em;
+
+// return text color
+// black - white
+@function get-button-text-color($bg-color) {
+    @if $bg-color == $gray {
+        @return $black;
+    }
+    @return $white;
+}
+
+@mixin light-style-padding() {
+    padding: 
+        (0.75em - $light-button-border)
+        (1.2em  - $light-button-border);
+}
+
+@mixin filled-style($color, $dark-amount: 0) {
+    $font-color: get-button-text-color($color);
+    background-color: darken($color, $dark-amount);
+    color: darken($font-color, $dark-amount);
+}
+
+@mixin light-style($color, $dark-amount: 0) {
+    color: darken($color, $dark-amount);
+    border: $light-button-border solid darken($color, $dark-amount);
+    background-color: transparent;
+}
+
+// default style
+@mixin default-style($color) {
+    @include filled-style($color);
+
+    &:hover, &:focus { 
+        @include filled-style($color, 5);
+    }
+
+    &:active { 
+        @include filled-style($color, 10); 
+    }
+}
+
+// light style
+@mixin basic-style($color) {
+    @include light-style($color);
+    @include light-style-padding();
+
+    &:hover, &:focus {
+        @include light-style($color, 4);
+    }
+
+    &:active {
+        @include light-style($color, 8);
+    }
+}
+
+// inverted style
+@mixin inverted-style($color) {
+    @include light-style($color);
+    @include light-style-padding();
+
+    &:hover, &:focus {
+        @include filled-style($color);
+    }
+
+    &:active {
+        @include filled-style($color, 5);
+        border-color: darken($color, 5);
+    }
+}
+
+.fl-button {
+    @include remove-border();
+    @include default-font();
+
+    display: inline-block;
+
+    // interact with user
+    user-select: none;
+    cursor: pointer; 
+
+    // text style
+    padding: 0.75em 1.2em;
+    font-weight: 700;
+    font-size: 1rem;
+
+    i {
+        width: 1em;
+    }
+
+    // default button
+    &:not(.inverted) {
+        @include default-style($gray);
+    }
+
+    &.mini, &.tiny {
+        font-weight: 300;
+    }
+
+    &.inverted { 
+        @include inverted-style($gray);
+    }
+
+    &.basic {
+        @include basic-style($gray);
+    }
+
+    &.icon {
+        padding: 0.75em;
+    }
+
+    &.circular {
+        border-radius: 10em;
+    }
+
+    // add more color
+    @each $color-name, $color in $color-map {
+        &.#{$color-name} {
+
+            // default style
+            &:not(.inverted) {
+                @include default-style($color);
+            }
+
+            // light style
+            &.basic {
+                @include basic-style($color);    
+            }
+
+            // inverted
+            &.inverted {
+                @include inverted-style($color);    
+            }
+        }
+    }
+}
+
+.fl-buttons {
+    display: inline-flex;
+    flex-direction: row;
+
+    &.y {
+        flex-direction: column;
+    }
+
+    @each $size-name, $size in $size-map {
+        &.#{$size-name} {
+            .fl-button {
+                font-size: $size;
+            }
+        }
+    }
+}

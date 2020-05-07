@@ -1,0 +1,29 @@
+@import "./themes/nature.scss";
+
+$color-map: (
+    "gray": $gray,
+    "blue": $blue, 
+    "green": $green, 
+    "olive": $olive, 
+    "orange": $orange, 
+    "red": $red, 
+    "yellow": $yellow
+);
+
+$size-map: (
+    "mini": 0.6rem,
+    "tiny": 0.8rem,
+    "small": 0.9rem,
+    "medium": 1rem,
+    "large": 1.2rem,
+    "big": 1.3rem,
+    "huge": 1.5rem,
+    "massive": 1.8rem
+);
+
+.disabled {
+    cursor: not-allowed;
+    opacity: .45 !important;
+    background-image: none !important;
+    pointer-events: none !important;
+}

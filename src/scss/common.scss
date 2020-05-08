@@ -11,19 +11,23 @@ $color-map: (
 );
 
 $size-map: (
-    "mini": 0.6rem,
-    "tiny": 0.8rem,
-    "small": 0.9rem,
-    "medium": 1rem,
-    "large": 1.2rem,
-    "big": 1.3rem,
-    "huge": 1.5rem,
-    "massive": 1.8rem
+    "mini"    : 0.6rem,
+    "tiny"    : 0.8rem,
+    "small"   : 0.9rem,
+    "medium"  : 1.0rem,
+    "large"   : 1.2rem,
+    "big"     : 1.3rem,
+    "huge"    : 1.5rem,
+    "massive" : 1.8rem
 );
 
-.disabled {
-    cursor: not-allowed;
-    opacity: .45 !important;
-    background-image: none !important;
-    pointer-events: none !important;
-}
+$size-map-px: (
+    "mini"    : 35px,
+    "tiny"    : 80px,
+    "small"   : 150px,
+    "medium"  : 300px,
+    "large"   : 450px,
+    "big"     : 600px,
+    "huge"    : 800px,
+    "massive" : 960px
+);

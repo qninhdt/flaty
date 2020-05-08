@@ -1,9 +1,11 @@
+@import "./elements/image.scss";
 @import "./elements/button.scss";
 @import "./common.scss";
 
 *, *::before, *::after {
     padding: 0;
     margin: 0;
+    box-sizing: inherit;
 }
 
 html {
@@ -26,4 +28,15 @@ body {
 
 .left {
     float: left;
+}
+
+.hidden {
+    display: none;
+}
+
+.disabled {
+    cursor: not-allowed;
+    opacity: .6 !important;
+    background-image: none !important;
+    pointer-events: none !important;
 }

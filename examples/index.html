@@ -7,7 +7,7 @@
     <title>Flaty - Development</title>
     <style>
         body {
-            background-color: #2c3e50;
+            /* background-color: #2c3e50; */
         }
         .main {
             margin: 200px auto;
@@ -15,12 +15,45 @@
         }
         .row {
             display: block;
-            margin-bottom: 50px;
+            text-align: center;
+            margin: 50px;
         }
     </style>
 </head>
 <body>
     <div class="main">
+        <div class="row">
+            <img src="lake_1.jpg" alt="Lake" class="fl-image small left width">
+            <p style="text-align: left;">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                Temporibus vero cumque totam et accusantium deleniti dignissimos 
+                explicabo aperiam ex, magnam corrupti, fugiat quasi quia delectus 
+                earum in sequi nesciunt quibusdam.Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                Temporibus vero cumque totam et accusantium deleniti dignissimos 
+                explicabo aperiam ex, magnam corrupti, fugiat quasi quia delectus 
+                earum in sequi nesciunt quibusdam.Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                Temporibus vero cumque totam et accusantium deleniti dignissimos 
+                explicabo aperiam ex, magnam corrupti, fugiat quasi quia delectus 
+                earum in sequi nesciunt quibusdam.Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                Temporibus vero cumque totam et accusantium deleniti dignissimos 
+                explicabo aperiam ex, magnam corrupti, fugiat quasi quia delectus 
+                earum in sequi nesciunt quibusdam.
+            </p>
+        </div>
+        <div class="row fl-images small width">
+            <img src="lake_1.jpg" alt="Lake" class="fl-image">
+            <img src="lake_2.jpg" alt="Lake" class="fl-image">
+            <img src="lake_3.jpg" alt="Lake" class="fl-image">
+            <img src="lake_4.jpg" alt="Lake" class="fl-image">
+        </div>
+        <div class="row">
+            <a href="lake_2.jpg" class="fl-image big disabled">
+                <img src="lake_2.jpg" alt="Lake">
+            </a>
+        </div>
+        <div class="row">
+            <p>Lorem ipsum dolor sit amet consectetur, <img src="lake_1.jpg" alt="Lake" class="fl-image mini spaced"> adipisicing elit. Architecto nemo, necessitatibus nulla laboriosam, nihil quos deserunt maxime optio odio velit perspiciatis est, nesciunt fuga atque commodi tempore obcaecati consequuntur similique?</p>
+        </div>
         <div class="row">
             <button class="fl-button">Ấn</button>
             <button class="fl-button red">Ấn</button>
@@ -35,16 +68,16 @@
         </div>
         <div class="row">
             <div class="fl-buttons huge">
-                <button class="fl-button">
+                <button class="fl-button icon">
                     <i class="far fa-align-left"></i>
                 </button>
-                <button class="fl-button">
+                <button class="fl-button icon">
                     <i class="far fa-align-center"></i>
                 </button>
-                <button class="fl-button">
+                <button class="fl-button icon">
                     <i class="far fa-align-right"></i>
                 </button>
-                <button class="fl-button">
+                <button class="fl-button icon">
                     <i class="far fa-align-justify"></i>
                 </button>
             </div>
@@ -52,21 +85,21 @@
         <div class="row">
             <div class="fl-buttons y">
                 <button class="fl-button">
-                    <i class="far fa-align-left"></i>
+                    <i class="far fa-align-left icon"></i>
                 </button>
                 <button class="fl-button">
-                    <i class="far fa-align-center"></i>
+                    <i class="far fa-align-center icon"></i>
                 </button>
                 <button class="fl-button">
-                    <i class="far fa-align-right"></i>
+                    <i class="far fa-align-right icon"></i>
                 </button>
-                <button class="fl-button disabled">
+                <button class="fl-button disabled icon">
                     <i class="far fa-align-justify"></i>
                 </button>
             </div>
         </div>
         <div class="row">
-            <a class="fl-button circular blue icon" href="#">
+            <a class="fl-button circular blue icon huge" href="#">
                 <i class="fab fa-facebook-square"></i>
             </a>
             <a class="fl-button blue icon">
